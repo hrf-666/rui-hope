@@ -1,37 +1,4 @@
-import { hopeTheme } from "vuepress-theme-hope";
-
-import { enNavbar, zhNavbar } from "./navbar/index.js";
-import { enSidebar, zhSidebar } from "./sidebar/index.js";
-import {authorConfig} from "./config/authorConfig.js";
-import {blogConfig} from "./config/blogConfig.js";
-import {encryptConfig} from "./config/encryptConfig.js";
-import {markdownConfig} from "./config/markdownConfig.js";
-import {localesConfig} from "./config/localesConfig.js";
-
-export default hopeTheme({
-  hostname: "https://rui-hope.vercel.app/",
-
-  author: authorConfig,
-
-  logo: "./logo.svg",
-
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
-
-  docsDir: "src",
-
-  blog: blogConfig,
-
-  locales: localesConfig,
-
-  encrypt: encryptConfig,
-
-  // enable it to preview all changes in time
-  // hotReload: true,
-
-  // These features are enabled for demo, only preserve features you need here
-  markdown: markdownConfig,
-
-  plugins: {
+export const pluginsConfig = {
     blog: true,
 
     // Install @waline/client before enabling it
@@ -43,11 +10,11 @@ export default hopeTheme({
     // },
 
     components: {
-      components: ["Badge", "VPCard"],
+        components: ["Badge", "VPCard"],
     },
 
     icon: {
-      prefix: "fa6-solid:",
+        prefix: "fa6-solid:",
     },
 
     // install @vuepress/plugin-pwa and uncomment these if you want a PWA
@@ -106,5 +73,4 @@ export default hopeTheme({
     //     ],
     //   },
     // },
-  },
-});
+}
